@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Auction_backend": {
+      "main": "src/Auction_backend/main.mo",
+      "type": "motoko"
+    },
+    "Auction_frontend": {
+      "dependencies": [
+        "Auction_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Auction_frontend/src/index.html"
+      },
+      "source": [
+        "src/Auction_frontend/assets",
+        "dist/Auction_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
